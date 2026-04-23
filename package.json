@@ -1,6 +1,6 @@
 {
   "name": "maimai-qskills",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "OpenClaw skills installer - 交互式安装/更新 OpenClaw skills",
   "bin": {
     "maimai-qskills": "./cli.mjs"
