@@ -4,13 +4,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import readline from 'node:readline';
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf-8'));
+const __dirname = new URL('.', import.meta.url).pathname;
+const ROOT = __dirname.replace(/\/$/, '');
+const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf-8'));
 
-const SKILLS_DIR = path.join(__dirname, 'skills');
-const SKILLS = fs.readdirSync(SKILLS_DIR).filter(d => {
-  return fs.statSync(path.join(SKILLS_DIR, d)).isDirectory();
-});
+const SKILLS_DIR = path.join(ROOT, 'skills');
+const SKILLS = JSON.parse(fs.readFileSync(path.join(ROOT, 'skills-list.json'), 'utf-8'));
 
 const CYAN = '\x1b[36m';
 const GREEN = '\x1b[32m';
