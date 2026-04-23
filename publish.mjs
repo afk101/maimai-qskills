@@ -31,6 +31,9 @@ async function main() {
   console.log(`${DIM}[1/3] 同步源文件...${RESET}`);
   execSync('node sync.mjs', { cwd: ROOT, stdio: 'inherit' });
 
+  // 1.5 git add so npm version sees a clean tree
+  execSync('git add -A', { cwd: ROOT, stdio: 'pipe' });
+
   // 2. version bump
   console.log(`\n${DIM}[2/3] 版本升级${RESET}`);
   const bump = await question('  升级类型 (patch/minor/major)', 'patch');
