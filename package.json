@@ -1,23 +1,16 @@
 {
   "name": "maimai-qskills",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "OpenClaw skills installer",
   "bin": {
-    "maimai-qskills": "./install.mjs"
+    "maimai-qskills": "index.js"
   },
   "files": [
-    "install.mjs",
+    "index.js",
     "skills-list.json",
     "skills/"
   ],
-  "keywords": [
-    "openclaw",
-    "claude",
-    "skills",
-    "maimai"
-  ],
+  "keywords": ["openclaw","claude","skills","maimai"],
   "license": "MIT",
-  "engines": {
-    "node": ">=16.7.0"
-  }
+  "engines": { "node": ">=16.7.0" }
 }
