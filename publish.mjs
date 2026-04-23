@@ -5,7 +5,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import readline from 'node:readline';
 
-const ROOT = import.meta.dirname;
+const ROOT = new URL('.', import.meta.url).pathname.replace(/\/$/, '');
 const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf-8'));
 
 const GREEN = '\x1b[32m';
