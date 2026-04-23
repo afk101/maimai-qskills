@@ -3,7 +3,7 @@ name: maimai-batch-message
 description: 在脉脉人才银行搜索人才、批量勾选候选人、JD匹配、发送沟通消息。通过 Chrome CDP 控制浏览器完成搜索→筛选→简历匹配→批量勾选→沟通的完整流程。当用户要求在脉脉上搜索人才、找人、发消息给候选人、人才银行操作时使用此 skill。依赖 chrome-cdp skill。
 ---
   
-  
+
 # 注意点  
 - **必须使用 chrome-cdp skill**：凡是要求打开浏览器、操作网页的任务，必须通过 chrome-cdp skill 的 `cdp.mjs` 脚本控制浏览器，不要使用 OpenClaw 内置的 browser 工具。
 - **不要自己启动 Chrome**：用户在正式 Chrome 中打开 `chrome://inspect/#remote-debugging` 开关即可，直接执行 `cdp.mjs list`（注意cdp.mjs脚本的执行路径） 验证连通性。  
