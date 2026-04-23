@@ -3,10 +3,10 @@
   "version": "1.0.3",
   "description": "OpenClaw skills installer - 交互式安装/更新 OpenClaw skills",
   "bin": {
-    "maimai-qskills": "./install"
+    "maimai-qskills": "./cli.mjs"
   },
   "files": [
-    "install",
+    "cli.mjs",
     "skills-list.json",
     "skills/"
   ],
